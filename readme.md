@@ -204,7 +204,7 @@ For stater1, we have
 | ----- | ------ | ------ |
 | rwx   | r-x    | r-x    |
 
-==users==: Can read, write and execute
+users: Can read, write and execute
 
 groups and others: Can read and execute
 
@@ -255,6 +255,53 @@ total 12
 drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rwxrwxrwx  1 eniola eniola    0 Aug 23 12:13 myfirstfile
+drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
+
+```
+
+#### Numeric Method
+
+Uses a three digit mode number
+
+- First digit specifies owner's permissions
+- Second digit specifies group permissions
+- Third digit specifies others' permissions
+
+How To Calculate Permissions
+
+- 4 : read
+- 2 : write
+- 1 : execute
+
+| users | Groups | Others |
+| ----- | ------ | ------ |
+| 4+2+1 | 4+2+1  | 4+2+1  |
+| ----- | ------ | ------ |
+| 7     | 7      | 7      |
+
+This denote that the user, group and others have full permission.
+
+Change the permission of myfirstfile, the user should have read and write permissions only, group should have read only while others should have no permission at all.
+
+All to do is to add up the numbers. 4 is for read, 2 is for write and 1 is for execute for each of them, This should give 640 if calculated well.
+
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates]
+└─$ ls -la
+total 12
+drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
+drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
+-rwxrwxrwx  1 eniola eniola    0 Aug 23 12:13 myfirstfile
+drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
+┌──(eniola㉿Eniola)-[~/Templates]
+└─$ chmod 640 myfirstfile
+┌──(eniola㉿Eniola)-[~/Templates]
+└─$ ls -la
+total 12
+drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
+drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
+-rw-r-----  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
 
 ```
