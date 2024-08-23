@@ -189,18 +189,27 @@ The permissions are divided into three,
 | rwx   | rwx    | rwx    |
 
 For myfirstfile, we have
-|users|Groups|Others|
-|rw-|r--|r--|
+
+| users | Groups | Others |
+| ----- | ------ | ------ |
+| rw-   | r--    | r--    |
+
 user: Can read and write
+
 group and other : Can only read
 
 For stater1, we have
-|users|Groups|Others|
-|rwx|r-x|r-x|
+
+| users | Groups | Others |
+| ----- | ------ | ------ |
+| rwx   | r-x    | r-x    |
+
 users: Can read, write and execute
+
 groups and others: Can read and execute
 
 File permissions can be changed by using **chmod**. It is used to add or remove permission.
+
 Use **+** to add and **-** to remove. I only did the addition here but still the same process.
 
 To add permission for the user only
