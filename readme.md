@@ -204,7 +204,7 @@ For stater1, we have
 | ----- | ------ | ------ |
 | rwx   | r-x    | r-x    |
 
-{: .red} users: Can read, write and execute
+==users==: Can read, write and execute
 
 groups and others: Can read and execute
 
@@ -243,7 +243,7 @@ drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
 
 ```
 
-To add or remove permission for other
+To add permission for others
 
 ```shell
 
