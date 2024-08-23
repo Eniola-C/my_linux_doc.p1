@@ -305,3 +305,31 @@ drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
 
 ```
+
+## Filter
+
+- **Grep**: Used to find texts from any text inputs
+
+```shell
+┌──(eniola㉿Eniola)-[~/Templates]
+└─$ grep -i fire /home/eniola/Templates/starter1/testinggrep
+firewall
+firewWALL enabled
+FIREWALL
+```
+
+Here I created a file in the starter1 directory called testinggrep and added different words in the file.I tried to use grep to search for a specific text. The -i is used to ignore case sensitivity.
+
+Grep can also be used to search for text in the directory consisting of different files incase one is not sure of the location of the text in the files.
+
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ grep -i firewall *
+test2grep:firewall enabled
+testinggrep:firewall
+testinggrep:FIREWALL
+
+```
+
+The wildcard \* is used to select all
