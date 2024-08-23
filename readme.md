@@ -204,7 +204,7 @@ For stater1, we have
 | ----- | ------ | ------ |
 | rwx   | r-x    | r-x    |
 
-users: Can read, write and execute
+{: .red} users: Can read, write and execute
 
 groups and others: Can read and execute
 
