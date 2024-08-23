@@ -60,20 +60,20 @@ Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Template
 ```shell
 
 
-| _File Type_ | _Symbol_ | _Meaning_                                                  |
+|**File Type**|**Symbol**|**Meaning**                                                 |
 | ----------- | -------- | ---------------------------------------------------------- |
-| _Regular_   | -        | Normal files such as text, data or executable files        |
-| ----------- | ----     | ---------------------------------------------------------- |
-| _Directory_ | d        | Files that are lists of other files                        |
-| ----------- | ----     | ---------------------------------------------------------- |
-| _Link_      | l        | A shortcut that points to the location of the actual file. |
-| ----------- | ----     | ---------------------------------------------------------- |
-| _Special_   | c        | Mechanism used for input and output such as files in /dev  |
-| ----------- | ----     | ---------------------------------------------------------- |
-| _Socket_    | s        | A special file that provides inter-process networking      |
-| ----------- | ----     | ---------------------------------------------------------- |
-| _Pipe_      | p        | Allows Processes to communicate with each other            |
-| ----------- | ----     | ---------------------------------------------------------- |
+| Regular     |    -     | Normal files such as text, data or executable files        |
+| ----------- | -------- | ---------------------------------------------------------- |
+| Directory   |    d     | Files that are lists of other files                        |
+| ----------- | -------- | ---------------------------------------------------------- |
+| Link        |    l     | A shortcut that points to the location of the actual file. |
+| ----------- | -------- | ---------------------------------------------------------- |
+| Special     |    c     | Mechanism used for input and output such as files in /dev  |
+| ----------- | -------- | ---------------------------------------------------------- |
+| Socket      |    s     | A special file that provides inter-process networking      |
+| ----------- | -------- | ---------------------------------------------------------- |
+| Pipe        |    p     | Allows Processes to communicate with each other            |
+| ----------- | -------- | ---------------------------------------------------------- |
 
 ```
 
