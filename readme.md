@@ -60,7 +60,7 @@ Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Template
 ```shell
 
 
-|**File Type**|**Symbol**|**Meaning**                                                 |
+|* File Type *|* Symbol *|* Meaning *                                                 |
 | ----------- | -------- | ---------------------------------------------------------- |
 | Regular     |    -     | Normal files such as text, data or executable files        |
 | ----------- | -------- | ---------------------------------------------------------- |
