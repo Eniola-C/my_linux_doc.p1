@@ -332,4 +332,27 @@ testinggrep:FIREWALL
 
 ```
 
+The -i is used to ignore case sensitivity
 The wildcard \* is used to select all
+The -v can be used in an opposite way
+
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ grep -iv firewall *
+testinggrep:DNS
+testinggrep:WIFI
+testinggrep:WIFI 3.0
+testinggrep:Penetration testing
+testinggrep:Soc Analyst
+testinggrep:DevSecOps
+testinggrep:SWOT
+testinggrep:Development
+testinggrep:Frontend Development
+testinggrep:Backend Development
+
+```
+
+## Conclusion':'
+
+There are still LESS, MORE, HEAD, TAil, CUT, AWK, SED,/dev/null,piping,FIND, Archiiving and lots more to cover. In other to reduce the length, i decided to stop here and continue in another repo.
