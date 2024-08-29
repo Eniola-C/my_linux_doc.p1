@@ -320,7 +320,7 @@ FIREWALL
 
 Here I created a file in the starter1 directory called testinggrep and added different words in the file.I tried to use grep to search for a specific text. The -i is used to ignore case sensitivity.
 
-Grep can also be used to search for text in the directory consisting of different files incase one is not sure of the location of the text in the files.
+**Grep** can also be used to search for text in the directory consisting of different files incase one is not sure of the location of the text in the files.
 
 ```shell
 
@@ -353,6 +353,186 @@ testinggrep:Backend Development
 
 ```
 
-## Conclusion':'
+**SED** is a stream editor for text processing. It is used for multiple files.
+
+**Basic Commands**
+
+- Substitute a word for another in the file
+
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ cat testinggrep
+firewall
+fireWALL enabled
+DNS
+WIFI
+WIFI 3.0
+Penetration testing
+Soc Analyst
+DevSecOps
+SWOT
+Development
+Frontend Development
+Backend Development
+FIREWALL
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ sed -i 's/DNS/TCP/' testinggrep
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ cat testinggrep
+firewall
+fireWALL enabled
+TCP
+WIFI
+WIFI 3.0
+Penetration testing
+Soc Analyst
+DevSecOps
+SWOT
+Development
+Frontend Development
+Backend Development
+FIREWALL
+```
+
+I substituted DNS for TCP in the above.
+
+- Delete Line
+
+```shell
+
+──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ sed '/Development/d' testinggrep
+firewall
+fireWALL enabled
+TCP
+WIFI
+WIFI 3.0
+Penetration testing
+Soc Analyst
+DevSecOps
+SWOT
+FIREWALL
+
+```
+
+The command deleted the line containing `Development`. Use `d` to delete.
+
+Print Lines Containing a Word
+
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ sed -n '/fire/p' testinggrep
+firewall
+firewall
+fireWALL enabled
+fireWALL enabled
+
+```
+
+This is used to print lines containing fire in the file testinggrep. Use `p` to print.
+
+**AWK** is used for pattern scanning and processing
+
+**Basic Commands**
+`Print`
+
+```shell
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk '{print $1}' testinggrep
+firewall
+firewall
+fireWALL
+fireWALL
+TCP
+WIFI
+WIFI
+Penetration
+Soc
+DevSecOps
+SWOT
+Development
+Frontend
+Backend
+FIREWALL
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk '{print $2}' testinggrep
+is
+
+enabled
+enabled
+
+
+3.0
+testing
+Analyst
+
+
+
+Development
+Development
+
+
+```
+
+`NR`: Current record number
+
+```shell
+
+──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk 'NR==1 {print}' testinggrep
+Always enable your firewall
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk 'NR==4 {print}' testinggrep
+fireWALL enabled
+
+```
+
+It printed any row indicated
+
+`NF`: Number of fields in the current record
+
+```shell
+
+TCP
+WIFI
+WIFI 3.0
+Penetration testing
+Soc Analyst
+DevSecOps
+SWOT
+Development
+Frontend Development
+Backend Development
+FIREWALL
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk 'NR>1 {print}' testinggrep
+firewall
+fireWALL enabled
+fireWALL enabled
+TCP
+WIFI
+WIFI 3.0
+Penetration testing
+Soc Analyst
+DevSecOps
+SWOT
+Development
+Frontend Development
+Backend Development
+FIREWALL
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ awk 'NR==1 {print}' testinggrep
+Always enable your firewall
+```
+
+The first and second commands print records with more than whatever number indicated while the last is just equating to a specific row. One thing to notice when using the greater than sign is that it started from the second row of any number you indicated.
+
+Check out for more commands as well.
+
+In the above, i printed the first line and second line of my file. It is vertically not horizontally. The empty lines are for those with just one word so there is nothing to print out.
+
+## Conclusion
 
 There are still LESS, MORE, HEAD, TAil, CUT, AWK, SED,/dev/null,piping,FIND, Archiiving and lots more to cover. In other to reduce the length, i decided to stop here and continue in another repo.
