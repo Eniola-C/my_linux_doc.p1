@@ -176,15 +176,15 @@ Also exposed the hidden files which were directories in this case.
 myfirstfile is a file because it started with _-_ while the starter1 is a directory because it starts with _d_.
 The permissions are divided into three,
 
-| users | Groups | Others |
-| ----- | ------ | ------ |
-| rwx   | rwx    | rwx    |
+| user | Group | Other |
+| ---- | ----- | ----- |
+| rwx  | rwx   | rwx   |
 
 For myfirstfile, we have
 
-| users | Groups | Others |
-| ----- | ------ | ------ |
-| rw-   | r--    | r--    |
+| user | Group | Other |
+| ---- | ----- | ----- |
+| rw-  | r--   | r--   |
 
 user: Can read and write
 
@@ -192,13 +192,13 @@ group and other : Can only read
 
 For stater1, we have
 
-| users | Groups | Others |
-| ----- | ------ | ------ |
-| rwx   | r-x    | r-x    |
+| user | Group | Other |
+| ---- | ----- | ----- |
+| rwx  | r-x   | r-x   |
 
-users: Can read, write and execute
+user: Can read, write and execute
 
-groups and others: Can read and execute
+group and other: Can read and execute
 
 File permissions can be changed by using **chmod**. It is used to add or remove permission.
 
@@ -262,15 +262,15 @@ How To Calculate Permissions
 - 2 : write
 - 1 : execute
 
-| users | Groups | Others |
+| user  | Group  | Other  |
 | ----- | ------ | ------ |
 | 4+2+1 | 4+2+1  | 4+2+1  |
 | ----- | ------ | ------ |
 | 7     | 7      | 7      |
 
-This denote that the user, group and others have full permission.
+This denote that the user, group and other have full permission.
 
-Change the permission of myfirstfile, the user should have read and write permissions only, group should have read only while others should have no permission at all.
+Change the permission of myfirstfile, the user should have read and write permissions only, group should have read only while other should have no permission at all.
 
 All to do is to add up the numbers. 4 is for read, 2 is for write and 1 is for execute for each of them, This should give 640 if calculated well.
 
@@ -634,6 +634,6 @@ The directory to search from is Document and `-type f` means consider files(not 
 
 `-r`: Search using regular expressions.
 
-## Conclusion:\t
+## Conclusion
 
 There are still LESS, MORE, HEAD, Tail, /dev/null, piping, Archiiving and lots more to document. In other to reduce the length, i decided to stop here and continue in another repo.
