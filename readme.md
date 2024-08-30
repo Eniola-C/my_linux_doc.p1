@@ -30,7 +30,6 @@
 Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  dead.letter  healthy-diets.vercel.app  trail.sh  trial  update.sh
 ┌──(eniola㉿Eniola)-[~]
 └─$ cd Desktop
-
 ```
 
 - **pwd** : Print Working Directory. Can be used to check an absolute path of the directory you are.
@@ -40,7 +39,6 @@ Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Template
 ┌──(eniola㉿Eniola)-[~/Desktop]
 └─$ pwd
 /home/eniola/Desktop
-
 ```
 
 - **ls** : List files and directories. ls can be attached to other parameters like -l, -la, -lt,etc.
@@ -50,7 +48,6 @@ Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Template
 ┌──(eniola㉿Eniola)-[~]
 └─$ ls
 Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  dead.letter  healthy-diets.vercel.app  trail.sh  trial  update.sh
-
 ```
 
 ## File Management
@@ -88,7 +85,6 @@ Burp-Suite-Pro  Desktop  Documents  Downloads  Music  Pictures  Public  Template
 ┌──(eniola㉿Eniola)-[~/Desktop]
 └─$ ls
 starter
-
 ```
 
 - **rmdir** : Remove an empty directory
@@ -111,7 +107,6 @@ starter
 ┌──(eniola㉿Eniola)-[~/Desktop]
 └─$ ls
 myfirstfile
-
 ```
 
 - **cp** : Copy files and directories
@@ -127,7 +122,6 @@ myfirstfile
 ┌──(eniola㉿Eniola)-[~/Templates]
 └─$ ls
 myfirstfile
-
 ```
 
 - **mv** : Move or rename files and directories
@@ -151,7 +145,6 @@ myfirstfile
 ┌──(eniola㉿Eniola)-[~/Templates]
 └─$ ls
 myfirstfile  starter1
-
 ```
 
 - **rm** : Remove files and directories
@@ -175,7 +168,6 @@ drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rw-r--r--  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
-
 ```
 
 Using -la will gave a long listing. Made it easy to identify the type of files and the files permissions.
@@ -225,7 +217,6 @@ drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rwxr-xr-x  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
-
 ```
 
 To add permission for the group only
@@ -240,7 +231,6 @@ drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rwxrwxr-x  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
-
 ```
 
 To add permission for others
@@ -256,7 +246,6 @@ drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rwxrwxrwx  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
-
 ```
 
 #### Numeric Method
@@ -303,7 +292,6 @@ drwxr-xr-x  3 eniola eniola 4096 Aug 23 12:39 .
 drwx------ 21 eniola eniola 4096 Aug 23 12:12 ..
 -rw-r-----  1 eniola eniola    0 Aug 23 12:13 myfirstfile
 drwxr-xr-x  2 eniola eniola 4096 Aug 23 12:38 starter1
-
 ```
 
 ## Filter
@@ -329,7 +317,6 @@ Here I created a file in the starter1 directory called testinggrep and added dif
 test2grep:firewall enabled
 testinggrep:firewall
 testinggrep:FIREWALL
-
 ```
 
 The -i is used to ignore case sensitivity
@@ -350,7 +337,6 @@ testinggrep:SWOT
 testinggrep:Development
 testinggrep:Frontend Development
 testinggrep:Backend Development
-
 ```
 
 **SED** is a stream editor for text processing. It is used for multiple files.
@@ -428,15 +414,15 @@ firewall
 firewall
 fireWALL enabled
 fireWALL enabled
-
 ```
 
 This is used to print lines containing fire in the file testinggrep. Use `p` to print.
 
 **AWK** is used for pattern scanning and processing
 
-**Basic Commands**
-`Print`
+**Basic Commands:**
+
+- Print
 
 ```shell
 ┌──(eniola㉿Eniola)-[~/Templates/starter1]
@@ -476,7 +462,9 @@ Development
 
 ```
 
-`NR`: Current record number
+In the above, i printed the first line and second line of my file. It is vertically not horizontally. The empty lines are for those with just one word so there is nothing to print out.
+
+- NR: Current record number
 
 ```shell
 
@@ -486,12 +474,11 @@ Always enable your firewall
 ┌──(eniola㉿Eniola)-[~/Templates/starter1]
 └─$ awk 'NR==4 {print}' testinggrep
 fireWALL enabled
-
 ```
 
 It printed any row indicated
 
-`NF`: Number of fields in the current record
+- NF: Number of fields in the current record
 
 ```shell
 
@@ -531,8 +518,122 @@ The first and second commands print records with more than whatever number indic
 
 Check out for more commands as well.
 
-In the above, i printed the first line and second line of my file. It is vertically not horizontally. The empty lines are for those with just one word so there is nothing to print out.
+**Cut** removes parts of lines from a file or input.
 
-## Conclusion
+- To Extract Characters
 
-There are still LESS, MORE, HEAD, TAil, CUT, AWK, SED,/dev/null,piping,FIND, Archiiving and lots more to cover. In other to reduce the length, i decided to stop here and continue in another repo.
+```shell
+
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ cut -c 1-5 testinggrep
+Alway
+firew
+fireW
+fireW
+TCP
+WIFI
+WIFI
+Penet
+Soc A
+DevSe
+SWOT
+Devel
+Front
+Backe
+FIREW
+```
+
+I extracted 5 characters from the file as seen above.
+
+- Extract Field(s)
+
+```shell
+┌──(eniola㉿Eniola)-[~/Templates/starter1]
+└─$ cut -d, -f1  testinggrep
+Always
+firewall
+fireWALL
+fireWALL
+TCP
+WIFI
+WIFI
+Penetration
+Soc Analyst
+DevSecOps
+SWOT
+Development
+Frontend
+Backend
+FIREWALL
+```
+
+You can try that with your passwd file or just create a file and include either a comma or colon. -d: is a delimiter, you can use either comma or colon after d. Just make sure you use the one that marches your file content while f represent the field you want to cut.
+
+**FIND** searches for files and directories based on various criteria.
+
+`Common Criteria`
+
+- name: Search by file name
+
+```shell
+
+┌──(eniola㉿Eniola)-[~]
+└─$ find Templates -name test*
+Templates/starter1/testinggrep
+Templates/starter1/testinggrepn
+Templates/starter1/test2grep
+┌──(eniola㉿Eniola)-[~]
+└─$ find . -name test*
+./Templates/starter1/testinggrep
+./Templates/starter1/testinggrepn
+./Templates/starter1/test2grep
+```
+
+If you have an idea of where the file can be just use the directory name after find and then -name and the name of the file. The \* is a wildcard used to indicate that it should give an output of all the files with that word. It is used when you can not fully remember the file name. The second line of code is almost the same apart from the fact that i made you of a dot which signify the current directory. Use this when you can not even remember where the file is located.
+
+- size: Search by file size
+
+```shell
+
+┌──(eniola㉿Eniola)-[~]
+└─$ find Documents -type f -size -1G
+Documents/myfirstfile
+```
+
+The directory to search from is Document and `-type f` means consider files(not directories) f stands for file. `-size -1G` means only consider files lesser than 1 Gigabyte. You can as well use + which means the opposite.
+
+**LOCATE** quickly searches for files and directories based on their names. It uses pre-built database to achieve a faster result than `FIND`
+
+```shell
+
+┌──(eniola㉿Eniola)-[~]
+└─$ locate Templates -i "testing"
+/home/eniola/Templates/starter1/testinggrep
+/home/eniola/Templates/starter1/testinggrepn
+
+```
+
+`-i` is to ignore case-sensitivity
+
+```shell
+
+┌──(eniola㉿Eniola)-[~]
+└─$ locate Templates -r "test"
+/home/eniola/Templates/starter1/test2grep
+/home/eniola/Templates/starter1/testinggrep
+/home/eniola/Templates/starter1/testinggrepn
+┌──(eniola㉿Eniola)-[~]
+└─$ locate Templates -r "test*"
+/home/eniola/Templates
+/home/eniola/Templates/myfirstfile
+/home/eniola/Templates/starter1
+/home/eniola/Templates/starter1/test2grep
+/home/eniola/Templates/starter1/testinggrep
+/home/eniola/Templates/starter1/testinggrepn
+```
+
+`-r`: Search using regular expressions.
+
+## Conclusion:\t
+
+There are still LESS, MORE, HEAD, Tail, /dev/null, piping, Archiiving and lots more to document. In other to reduce the length, i decided to stop here and continue in another repo.
